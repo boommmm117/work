@@ -1,0 +1,7 @@
+{
+    "search.useGlobalIgnoreFiles": true,
+    "files.exclude": {
+        "": true
+    },
+    "python.REPL.enableREPLSmartSend": false
+}

@@ -1,9 +1,5 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-import os
-
-print(os.getcwd())
-print(os.listdir())
 
 df = pd.read_excel('DATA1.xlsx', header=None)
 df.columns = ['DATA']

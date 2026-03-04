@@ -1,10 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 df = pd.read_excel('DATA1.xlsx', header=None)
 df.columns = ['DATA']
-
 data = df['DATA']
 # ===STATISTICS===
 
@@ -29,13 +27,13 @@ for i,(name,value) in enumerate(stats):
     print(f"{i+1}.{name} = {value}")
 
 # ===graph===
-labels = data.astype(str)
-values = data.values
 
-
-plt.figure()
-plt.pie(values, labels=labels, autopct='%1.1f%%')
-plt.title("Pie Chart Distribution")
+plt.bar(range(len(data)), data)
+plt.title("Bar Chart of DATA")
+plt.xlabel("Index")
+plt.ylabel("Value")
+plt.xticks(range(len(data)))
+plt.grid(axis='y', linestyle='--')
 plt.show()
 
 plt.plot(data,marker='o')

@@ -3,24 +3,24 @@ import pandas as pd
 
 df = pd.read_excel('DATA1.xlsx', header=None)
 df.columns = ['DATA']
-data = df['DATA']
+values= df['DATA']
 # ===STATISTICS===
 
 print('==Value DATA==')
-print(f'{data}','\n')
+print(f'{values}','\n')
 print('==STATISTICS==')
 
 stats = [
-    ("Max", data.max()),
-    ("Min", data.min()),
-    ("Sum", data.sum()),
-    ("Mean", data.mean()),
-    ("Median", data.median()),
-    ("Standard Deviation", data.std()),
-    ("Variance", data.var()),
-    ("Q1", data.quantile(0.25)),
-    ("Q2", data.quantile(0.50)),
-    ("Q3", data.quantile(0.75))
+    ("Max", values.max()),
+    ("Min", values.min()),
+    ("Sum", values.sum()),
+    ("Mean", values.mean()),
+    ("Median", values.median()),
+    ("Standard Deviation", values.std()),
+    ("Variance", values.var()),
+    ("Q1", values.quantile(0.25)),
+    ("Q2", values.quantile(0.50)),
+    ("Q3", values.quantile(0.75))
 ]
 
 for i,(name,value) in enumerate(stats):
@@ -28,15 +28,15 @@ for i,(name,value) in enumerate(stats):
 
 # ===graph===
 
-plt.bar(range(len(data)), data)
+plt.bar(range(len(values)), values)
 plt.title("Bar Chart of DATA")
 plt.xlabel("Index")
 plt.ylabel("Value")
-plt.xticks(range(len(data)))
+plt.xticks(range(len(values)))
 plt.grid(axis='y', linestyle='--')
 plt.show()
 
-plt.plot(data,marker='o')
+plt.plot(values,marker='o')
 plt.title('Line plot of DATA')
 plt.xlabel('index')
 plt.ylabel('DATA')

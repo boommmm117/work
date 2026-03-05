@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_excel('DATA1.xlsx', header=None)
+df = pd.read_excel('m4a1.xlsx', header=None)
 df.columns = ['DATA']
 values= df['DATA']
 # ===STATISTICS===

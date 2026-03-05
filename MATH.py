@@ -11,21 +11,20 @@ print(f'{values}','\n')
 print('==STATISTICS==')
 
 stats = [
-    ("Max", values.max()),
-    ("Min", values.min()),
-    ("Sum", values.sum()),
-    ("Mean", values.mean()),
-    ("Median", values.median()),
-    ("Standard Deviation", values.std()),
-    ("Variance", values.var()),
-    ("Q1", values.quantile(0.25)),
-    ("Q2", values.quantile(0.50)),
-    ("Q3", values.quantile(0.75))
+    ("ค่าสูงสุด", values.max()),
+    ("ค่าต่ำสุด", values.min()),
+    ("ผลรวม", values.sum()),
+    ("ค่าเฉลี่ย", values.mean()),
+    ("ค่ามัธยฐาน", values.median()),
+    ("ส่วนเบี่ยงเบนมาตรฐาน", values.std()),
+    ("ความแปรปรวน", values.var()),
+    ("ควอไทล์ที่ 1 (Q1)", values.quantile(0.25)),
+    ("ควอไทล์ที่ 2 (Q2)", values.quantile(0.50)),
+    ("ควอไทล์ที่ 3 (Q3)", values.quantile(0.75))
 ]
 
 for i,(name,value) in enumerate(stats):
-    print(f"{i+1}.{name} = {value}")
-
+    print(f"{i+1}. {name} = {value}")
 # ===graph===
 
 plt.bar(range(len(values)), values)
